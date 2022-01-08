@@ -17,8 +17,8 @@ public class LazyInstantiation {
     // Provides the global point of access to the Singleton object and returns the instance to the caller
     public static LazyInstantiation getInstance() {
         if (instance == null) {
-            synchronized (LazyInstantiation.class) {
-                if (instance == null) { // check again as multiple threads can reach above step
+            synchronized (LazyInstantiation.class) { // Only one thread can execute this at a time
+                if (instance == null) { // Check again as multiple threads can reach above step
                     instance = new LazyInstantiation();
                 }
             }
