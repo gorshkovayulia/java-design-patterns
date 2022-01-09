@@ -1,5 +1,7 @@
 package creational.prototype;
 
+import java.util.Objects;
+
 public class EmployeeRecord implements Prototype {
 
     private int id;
@@ -23,6 +25,25 @@ public class EmployeeRecord implements Prototype {
     @Override
     public Prototype getClone() {
         return new EmployeeRecord(id,name,salary,address);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        EmployeeRecord that = (EmployeeRecord) o;
+        return id == that.id &&
+                Double.compare(that.salary, salary) == 0 &&
+                name.equals(that.name) && address.equals(that.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, salary, address);
     }
 }
 
