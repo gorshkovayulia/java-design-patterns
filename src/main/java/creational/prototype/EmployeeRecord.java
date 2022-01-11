@@ -24,7 +24,7 @@ public class EmployeeRecord implements Prototype {
     // Will return another EmployeeRecord with the same id, name, salary and address to the one created before
     @Override
     public Prototype getClone() {
-        return new EmployeeRecord(id,name,salary,address);
+        return new EmployeeRecord(id, name, salary, address);
     }
 
     @Override
