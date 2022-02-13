@@ -1,7 +1,7 @@
 package creational.singleton;
 
-/*
-* In such case, we create the instance of the class in synchronized method or synchronized block,
+/**
+ * In such case, we create the instance of the class in synchronized method or synchronized block,
 * so instance of the class is created when required
  */
 public class LazyInstantiation {
