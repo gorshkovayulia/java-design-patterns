@@ -16,10 +16,10 @@ public class ProxyInternet implements Internet {
     }
 
     @Override
-    public void connectTo(String serverhost) throws Exception {
+    public String connectTo(String serverhost) throws Exception {
         if (bannedSites.contains(serverhost.toLowerCase())) {
             throw new Exception("Access Denied");
         }
-        internet.connectTo(serverhost); // delegate the work to the service object
+        return internet.connectTo(serverhost); // delegate the work to the service object
     }
 }
