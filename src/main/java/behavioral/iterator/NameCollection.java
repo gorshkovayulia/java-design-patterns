@@ -5,7 +5,7 @@ public class NameCollection implements Collection {
     int numberOfItems = 0;
     Name[] nameList;
 
-    public NameCollection(int numberOfItems, Name[] nameList) {
+    public NameCollection() {
         nameList = new Name[MAX_ITEMS];
     }
 
