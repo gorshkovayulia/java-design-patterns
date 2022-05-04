@@ -1,4 +1,4 @@
-package structural.proxy.decorator;
+package structural.decorator;
 
 import org.testng.annotations.Test;
 import structural.decorator.Car;
