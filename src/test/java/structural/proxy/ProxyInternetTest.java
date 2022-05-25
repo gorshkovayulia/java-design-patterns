@@ -1,6 +1,8 @@
 package structural.proxy;
 
 import org.testng.annotations.Test;
+import structural.proxy.Internet;
+import structural.proxy.ProxyInternet;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertThrows;
